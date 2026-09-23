@@ -50,8 +50,8 @@ export function ContactForm() {
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
   useEffect(() => {
-    const typeParam = searchParams.get("type");
-    const productParam = searchParams.get("product");
+    const typeParam = searchParams?.get("type");
+    const productParam = searchParams?.get("product");
 
     if (typeParam) {
       setInquiryType(normalizeInquiryType(typeParam));
